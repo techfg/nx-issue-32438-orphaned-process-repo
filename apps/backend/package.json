@@ -78,7 +78,7 @@
       "serve": {
         "continuous": true,
         "executor": "@nx/js:node",
-        "defaultConfiguration": "development",
+        "defaultConfiguration": "production",
         "dependsOn": [
           "build"
         ],
@@ -94,7 +94,23 @@
             "buildTarget": "@nx-issue-repro/backend:build:production"
           }
         }
-      }
+      },
+      "serve-dist": {
+        "continuous": true,
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "node apps/backend/dist/main.js"
+        },
+        "dependsOn": ["build"]        
+      },
+      "dev": {
+        "executor": "nx:run-commands",
+        "continuous": true,
+        "options": {
+          "command": "bash apps/backend/scripts/dev.sh"
+        },
+        "dependsOn": ["build"]
+      }      
     }
   },
   "dependencies": {
