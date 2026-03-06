@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-        "dev": "nx run backend:dev"
+    "dev": "nx run backend:dev",
+    "dev-go": "nx run backend-go:dev"
   },
   "private": true,
   "dependencies": {

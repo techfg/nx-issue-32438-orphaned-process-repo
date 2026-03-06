@@ -1,0 +1,44 @@
+{
+  "name": "backend-go",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/backend-go",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
+      "options": {
+        "command": "mkdir -p {projectRoot}/dist && go build -o {projectRoot}/dist/backend-go {projectRoot}/main.go"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "continuous": true,
+      "options": {
+        "command": "go run {projectRoot}/main.go"
+      }
+    },
+    "serve-dist": {
+      "continuous": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "{projectRoot}/dist/backend-go"
+      },
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "continuous": true,
+      "options": {
+        "command": "bash {projectRoot}/scripts/dev.sh"
+      },
+      "dependsOn": [
+        "build"
+      ]
+    }
+  }
+}
