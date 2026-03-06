@@ -1,0 +1,11 @@
+services:
+  redis:
+    image: "valkey/valkey:alpine"
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 1s
+      timeout: 10s
+      retries: 5
+    ports:
+      - "6379:6379"
+    command: valkey-server --save "" --appendonly no
