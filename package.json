@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "nx run backend:dev",
-    "dev-go": "nx run backend-go:dev"
+    "dev-go": "nx run backend-go:dev",
+    "start": "npm run dev",
+    "start-go": "npm run dev-go"
   },
   "private": true,
   "dependencies": {
