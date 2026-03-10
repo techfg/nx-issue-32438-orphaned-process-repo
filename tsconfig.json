@@ -14,6 +14,27 @@
     },
     {
       "path": "./libs/my-lib3"
+    },
+    {
+      "path": "./libs/my-lib4"
+    },
+    {
+      "path": "./libs/my-lib5"
+    },
+    {
+      "path": "./libs/my-lib6"
+    },
+    {
+      "path": "./libs/my-lib7"
+    },
+    {
+      "path": "./libs/my-lib8"
+    },
+    {
+      "path": "./libs/my-lib9"
+    },
+    {
+      "path": "./libs/my-lib10"
     }
   ]
 }

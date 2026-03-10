@@ -1,0 +1,39 @@
+{
+  "name": "@nx-issue-repro/my-lib7",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@nx-issue-repro/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "@nx/esbuild:esbuild",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "libs/my-lib7/dist",
+          "main": "libs/my-lib7/src/index.ts",
+          "tsConfig": "libs/my-lib7/tsconfig.lib.json",
+          "format": [
+            "esm"
+          ],
+          "declarationRootDir": "libs/my-lib7/src"
+        }
+      }
+    },
+    "tags": ["type:backend-dep"]
+  },
+  "dependencies": {}
+}
