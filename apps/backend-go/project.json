@@ -29,7 +29,8 @@
         "cwd": "{projectRoot}"
       },
       "dependsOn": [
-        "build"
+        "build",
+        { "projects": "tag:type:backend-dep", "target": "build" }
       ]
     },
     "dev": {
@@ -41,6 +42,7 @@
       },
       "dependsOn": [
         "build",
+        { "projects": "tag:type:backend-dep", "target": "build" },
         "start-deps"
       ]
     },

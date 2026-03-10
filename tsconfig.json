@@ -5,6 +5,15 @@
   "references": [
     {
       "path": "./apps/backend"
+    },
+    {
+      "path": "./libs/my-lib1"
+    },
+    {
+      "path": "./libs/my-lib2"
+    },
+    {
+      "path": "./libs/my-lib3"
     }
   ]
 }
