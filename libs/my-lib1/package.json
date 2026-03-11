@@ -16,7 +16,8 @@
     }
   },
   "nx": {
-    "tags": ["type:backend-dep"]
+    "tags": ["type:backend-dep"],
+    "implicitDependencies": ["cli", "my-common"]
   },   
   "dependencies": {}
 }

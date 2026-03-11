@@ -6,11 +6,12 @@
   "targets": {
     "build": {
       "executor": "nx:run-commands",
-      "inputs": ["default", "^production", "sharedGlobals"],
+      "inputs": ["golang", "default", "^production", "sharedGlobals"],
       "outputs": ["{options.outputPath}"],
       "options": {
-        "command": "mkdir -p ./dist && go build -o ./dist/backend-go ./main.go",
-        "cwd": "{projectRoot}"
+        "command": "mkdir -p ./dist && go build -o {args.outputPath} ./main.go",
+        "cwd": "{projectRoot}",
+        "outputPath": "./dist/backend-go"
       }
     },
     "serve": {

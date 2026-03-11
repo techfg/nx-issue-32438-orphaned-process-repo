@@ -1,5 +1,5 @@
 {
-  "name": "@nx-issue-repro/my-lib7",
+  "name": "@nx-issue-repro/my-common",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -23,18 +23,18 @@
           "{options.outputPath}"
         ],
         "options": {
-          "outputPath": "libs/my-lib7/dist",
-          "main": "libs/my-lib7/src/index.ts",
-          "tsConfig": "libs/my-lib7/tsconfig.lib.json",
+          "outputPath": "libs/my-common/dist",
+          "main": "libs/my-common/src/index.ts",
+          "tsConfig": "libs/my-common/tsconfig.lib.json",
           "format": [
             "esm"
           ],
-          "declarationRootDir": "libs/my-lib7/src"
+          "declarationRootDir": "libs/my-common/src"
         }
       }
     },
     "tags": ["type:backend-dep"],
-    "implicitDependencies": ["cli", "my-common"]
+    "implicitDependencies": ["cli"]
   },
   "dependencies": {}
 }

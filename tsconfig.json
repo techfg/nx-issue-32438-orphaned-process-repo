@@ -35,6 +35,9 @@
     },
     {
       "path": "./libs/my-lib10"
+    },
+    {
+      "path": "./libs/my-common"
     }
   ]
 }
